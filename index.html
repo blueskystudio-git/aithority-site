@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aithority delivers AI-powered SEO, paid media, automation, and custom web development for multi-location businesses and ambitious brands ready to dominate search." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Aithority — AI-Powered Growth Agency" />
+  <meta property="og:description" content="Search built by machines. Run by experts. AI-powered SEO, paid media, automation, and custom Next.js web development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aithority.com" />
+  <title>Aithority — AI-Powered Growth Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #050506;
+      --black-2: #0c0c0e;
+      --white: #F2F0EB;
+      --muted: #888885;
+      --muted-2: #555552;
+      --accent: #C8FF00;
+      --accent-dim: #a8d600;
+      --accent-glow: rgba(200, 255, 0, 0.08);
+      --border: rgba(242, 240, 235, 0.1);
+      --border-strong: rgba(242, 240, 235, 0.18);
+      --surface: rgba(242, 240, 235, 0.03);
+      --font-head: 'Inter', -apple-system, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-head);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* ─── SCROLLBAR ─────────────────────────────────── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--muted-2); border-radius: 2px; }
+
+    /* ─── NAV ─────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 3rem;
+      border-bottom: 0.5px solid var(--border);
+      background: rgba(5, 5, 6, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .nav-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--accent);
+      padding: 0.65rem 1.5rem;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover { background: var(--accent-dim); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--white);
+      transition: all 0.3s;
+    }
+
+    /* ─── SECTIONS ────────────────────────────────────── */
+    section { padding: 8rem 3rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    /* ─── HERO ────────────────────────────────────────── */
+    #hero {
+      padding-top: 14rem;
+      padding-bottom: 10rem;
+      border-bottom: 0.5px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero-accent-blob {
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(200,255,0,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--accent);
+    }
+
+    h1.hero-headline {
+      font-size: clamp(3.5rem, 8vw, 8.5rem);
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      margin-bottom: 2.5rem;
+      max-width: 950px;
+    }
+
+    h1.hero-headline em {
+      font-style: italic;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 3.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--accent);
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dim);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--muted-2);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .btn-ghost:hover {
+      color: var(--white);
+      border-color: var(--white);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 4rem;
+      margin-top: 6rem;
+      padding-top: 4rem;
+      border-top: 0.5px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .stat-num {
+      font-size: 2.75rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .stat-num span { color: var(--accent); }
+
+    .stat-label {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    /* ─── SECTION HEADERS ─────────────────────────────── */
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 1.5px;
+      background: var(--accent);
+    }
+
+    h2.section-title {
+      font-size: clamp(2rem, 4vw, 3.75rem);
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    h2.section-title em {
+      font-style: italic;
+      font-family: var(--font-serif);
+      font-weight: 400;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 480px;
+    }
+
+    /* ─── SERVICES ────────────────────────────────────── */
+    #services { border-bottom: 0.5px solid var(--border); }
+
+    .services-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 5rem;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service-card {
+      padding: 3rem 2.5rem;
+      border: 0.5px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: background 0.35s;
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .service-card:hover { background: var(--surface); }
+    .service-card:hover::after { transform: scaleX(1); }
+
+    .service-num {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      font-family: monospace;
+    }
+
+    .service-icon {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      display: block;
+      color: var(--muted-2);
+    }
+
+    .service-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .service-desc {
+      font-size: 0.875rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .service-features { list-style: none; }
+
+    .service-features li {
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--muted);
+      padding: 0.45rem 0;
+      border-top: 0.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .service-features li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ─── TRACKS ──────────────────────────────────────── */
+    #tracks {
+      background: rgba(242, 240, 235, 0.015);
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .tracks-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+      margin-bottom: 5rem;
+    }
+
+    .tracks-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .track-card {
+      border: 0.5px solid var(--border);
+      padding: 3rem;
+      position: relative;
+      transition: border-color 0.3s;
+    }
+
+    .track-card:hover { border-color: var(--border-strong); }
+
+    .track-badge {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.8rem;
+      margin-bottom: 2rem;
+      border: 0.5px solid var(--accent);
+      color: var(--accent);
+    }
+
+    .track-name {
+      font-size: 1.75rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .track-ideal {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .track-tiers { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .tier {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: rgba(242, 240, 235, 0.04);
+      border: 0.5px solid var(--border);
+    }
+
+    .tier-name {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    .tier-price {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .track-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      font-weight: 300;
+      line-height: 1.65;
+    }
+
+    /* ─── PROCESS ─────────────────────────────────────── */
+    #how { border-bottom: 0.5px solid var(--border); }
+
+    .process-header { margin-bottom: 5rem; }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .step {
+      padding: 2.5rem 2.5rem 2.5rem 0;
+      border-right: 0.5px solid var(--border);
+      padding-right: 2.5rem;
+    }
+
+    .step:first-child { padding-left: 0; }
+    .step:not(:first-child) { padding-left: 2.5rem; }
+    .step:last-child { border-right: none; }
+
+    .step-num {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: var(--accent);
+      font-family: monospace;
+      margin-bottom: 2rem;
+    }
+
+    .step-name {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .step-desc {
+      font-size: 0.85rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    /* ─── TECH ────────────────────────────────────────── */
+    #tech { border-bottom: 0.5px solid var(--border); }
+
+    .tech-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 5rem;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tech-item {
+      padding: 2.5rem 2rem;
+      border: 0.5px solid var(--border);
+      text-align: center;
+      transition: background 0.3s;
+      cursor: default;
+    }
+
+    .tech-item:hover { background: var(--accent-glow); }
+
+    .tech-logo {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--muted-2);
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .tech-item:hover .tech-logo { color: var(--accent); }
+
+    .tech-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.01em;
+    }
+
+    .tech-role {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ─── CTA ─────────────────────────────────────────── */
+    #cta {
+      text-align: center;
+      padding: 10rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-blob {
+      position: absolute;
+      bottom: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(200,255,0,0.05) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2.cta-headline {
+      font-size: clamp(2.75rem, 6vw, 6.5rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 0.9;
+      margin-bottom: 2.5rem;
+    }
+
+    h2.cta-headline em {
+      font-style: italic;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .cta-sub {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--muted);
+      margin-bottom: 3.5rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .cta-note {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: var(--muted-2);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+
+    /* ─── FOOTER ──────────────────────────────────────── */
+    footer {
+      border-top: 0.5px solid var(--border);
+      padding: 2.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      font-size: 0.85rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .footer-logo span { color: var(--accent); }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--white); }
+
+    /* ─── ANIMATIONS ──────────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ─── MOBILE NAV OPEN STATE ───────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--black);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover { color: var(--accent); }
+
+    .mobile-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 3rem;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* ─── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .tech-grid { grid-template-columns: repeat(4, 1fr); }
+      .tracks-intro { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+
+      section { padding: 5rem 1.5rem; }
+
+      #hero { padding-top: 9rem; padding-bottom: 6rem; }
+      .hero-stats { gap: 2.5rem; }
+
+      .services-header { flex-direction: column; }
+      .services-grid { grid-template-columns: 1fr; }
+
+      .tracks-grid { grid-template-columns: 1fr; }
+
+      .process-steps { grid-template-columns: 1fr; }
+      .step { border-right: none; border-bottom: 0.5px solid var(--border); padding: 2rem 0; }
+      .step:not(:first-child) { padding-left: 0; }
+      .step:last-child { border-bottom: none; }
+
+      .tech-grid { grid-template-columns: repeat(2, 1fr); }
+      .tech-header { flex-direction: column; align-items: flex-start; }
+
+      footer { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .footer-links { flex-wrap: wrap; gap: 1.25rem; }
+
+      #cta { padding: 6rem 1.5rem; }
+      .cta-actions { flex-direction: column; align-items: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats { flex-direction: column; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="Aithority home">AITH<span>O</span>RITY</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#tracks">Tracks</a></li>
+      <li><a href="#how">Process</a></li>
+      <li><a href="#tech">Stack</a></li>
+    </ul>
+    <a href="#cta" class="nav-cta">Get a Proposal</a>
+    <button class="nav-hamburger" aria-label="Open menu" onclick="openMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="mobile-close" onclick="closeMenu()" aria-label="Close menu">&times;</button>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#tracks" onclick="closeMenu()">Tracks</a>
+    <a href="#how" onclick="closeMenu()">Process</a>
+    <a href="#tech" onclick="closeMenu()">Stack</a>
+    <a href="#cta" class="btn-primary" onclick="closeMenu()">Get a Proposal</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-accent-blob" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-eyebrow fade-in">AI-Powered Growth Agency</div>
+      <h1 class="hero-headline fade-in">
+        Search. <em>Built</em><br>by machines.<br>Run by experts.
+      </h1>
+      <p class="hero-sub fade-in">
+        Aithority delivers AI-powered SEO, paid media, automation, and custom web development for multi-location businesses and ambitious brands ready to dominate search.
+      </p>
+      <div class="hero-actions fade-in">
+        <a href="#cta" class="btn-primary">Start a Project</a>
+        <a href="#services" class="btn-ghost">See what we do</a>
+      </div>
+      <div class="hero-stats fade-in">
+        <div>
+          <div class="stat-num">10<span>&times;</span></div>
+          <div class="stat-label">Content velocity vs. traditional</div>
+        </div>
+        <div>
+          <div class="stat-num">Full<span>&#8209;</span>Stack</div>
+          <div class="stat-label">SEO + Paid + Web + Automation</div>
+        </div>
+        <div>
+          <div class="stat-num">AI<span>&#8209;</span>First</div>
+          <div class="stat-label">From intake to reporting</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" aria-label="Services">
+    <div class="container">
+      <div class="services-header">
+        <div class="fade-in">
+          <div class="section-label">What we do</div>
+          <h2 class="section-title">Every lever.<br><em>Pulled together.</em></h2>
+        </div>
+        <p class="section-sub fade-in">We build integrated growth systems — not siloed campaigns. AI handles the scale. Our team handles the strategy.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card fade-in">
+          <div class="service-num">01</div>
+          <span class="service-icon" aria-hidden="true">◎</span>
+          <div class="service-name">AI-Powered SEO</div>
+          <p class="service-desc">Programmatic content at scale, technical audits, GEO optimization, and local search domination — built on the Aithority platform.</p>
+          <ul class="service-features" aria-label="SEO service features">
+            <li>Local &amp; multi-location SEO</li>
+            <li>Generative engine optimization (GEO)</li>
+            <li>AI content production pipelines</li>
+            <li>Schema markup &amp; technical SEO</li>
+            <li>Google Business Profile management</li>
+          </ul>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-num">02</div>
+          <span class="service-icon" aria-hidden="true">▲</span>
+          <div class="service-name">Paid Media</div>
+          <p class="service-desc">Google Ads campaigns engineered for intent. From keyword architecture to automated bid management and performance reporting.</p>
+          <ul class="service-features" aria-label="Paid media service features">
+            <li>Google Search &amp; Performance Max</li>
+            <li>Keyword architecture &amp; match-type strategy</li>
+            <li>AI-assisted ad copy testing</li>
+            <li>Automated reporting dashboards</li>
+            <li>Local Services Ads management</li>
+          </ul>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-num">03</div>
+          <span class="service-icon" aria-hidden="true">⬡</span>
+          <div class="service-name">Custom Web Development</div>
+          <p class="service-desc">Performance-first websites on Next.js and Astro. Built for speed, conversion, and CMS flexibility — deployed on Vercel.</p>
+          <ul class="service-features" aria-label="Web development service features">
+            <li>Next.js &amp; Astro builds</li>
+            <li>Headless CMS integration (Sanity)</li>
+            <li>Core Web Vitals optimization</li>
+            <li>E-commerce &amp; multi-location sites</li>
+            <li>Design-to-code from brand systems</li>
+          </ul>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-num">04</div>
+          <span class="service-icon" aria-hidden="true">⟳</span>
+          <div class="service-name">Marketing Automation</div>
+          <p class="service-desc">n8n and AI-driven workflows that eliminate manual work — from GBP posting schedules to reporting pipelines and lead routing.</p>
+          <ul class="service-features" aria-label="Automation service features">
+            <li>GBP post automation with AI image gen</li>
+            <li>n8n workflow architecture</li>
+            <li>CRM &amp; form integration</li>
+            <li>Automated client reporting</li>
+            <li>AI content scheduling &amp; publishing</li>
+          </ul>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-num">05</div>
+          <span class="service-icon" aria-hidden="true">◈</span>
+          <div class="service-name">Analytics &amp; Reporting</div>
+          <p class="service-desc">Custom Looker Studio dashboards, GBP performance tracking, and AI-generated insights — delivered on a clear cadence.</p>
+          <ul class="service-features" aria-label="Analytics service features">
+            <li>Looker Studio build &amp; management</li>
+            <li>GBP &amp; map pack performance</li>
+            <li>Google Ads attribution</li>
+            <li>Monthly AI-generated commentary</li>
+            <li>Executive summary reporting</li>
+          </ul>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-num">06</div>
+          <span class="service-icon" aria-hidden="true">◐</span>
+          <div class="service-name">Brand Strategy</div>
+          <p class="service-desc">BRAND.md intake process, competitive positioning, and visual identity direction — the foundation for everything that follows.</p>
+          <ul class="service-features" aria-label="Brand strategy service features">
+            <li>Brand intake &amp; positioning</li>
+            <li>Competitive landscape analysis</li>
+            <li>Messaging hierarchy</li>
+            <li>Content voice &amp; tone guidelines</li>
+            <li>Logo &amp; identity direction</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACKS -->
+  <section id="tracks" aria-label="Retainer tracks">
+    <div class="container">
+      <div class="tracks-intro">
+        <div class="fade-in">
+          <div class="section-label">Retainer Tracks</div>
+          <h2 class="section-title">Two tracks.<br><em>One platform.</em></h2>
+          <p class="section-sub" style="margin-top:1.5rem">Aithority retainers are productized — clear deliverables, transparent tiers, AI-powered execution at a fraction of traditional agency cost.</p>
+        </div>
+        <div class="fade-in" style="padding-top:0.5rem">
+          <p style="font-size:0.95rem;font-weight:300;line-height:1.85;color:var(--muted)">Every retainer includes access to the Aithority client portal — live rankings, GBP metrics, content performance, and reporting in one place.</p>
+          <p style="font-size:0.95rem;font-weight:300;line-height:1.85;color:var(--muted);margin-top:1rem">No spreadsheets. No guesswork. Just numbers that matter, updated automatically.</p>
+        </div>
+      </div>
+      <div class="tracks-grid">
+
+        <div class="track-card fade-in">
+          <div class="track-badge">Local Track</div>
+          <div class="track-name">Aithority Local</div>
+          <div class="track-ideal">For single-location and multi-location businesses competing in local search</div>
+          <div class="track-tiers">
+            <div class="tier">
+              <span class="tier-name">Essentials</span>
+              <span class="tier-price">From $997 / mo</span>
+            </div>
+            <div class="tier">
+              <span class="tier-name">Growth</span>
+              <span class="tier-price">From $1,997 / mo</span>
+            </div>
+            <div class="tier">
+              <span class="tier-name">Dominate</span>
+              <span class="tier-price">From $3,497 / mo</span>
+            </div>
+          </div>
+          <p class="track-note">GBP optimization, local content, citations, review strategy, map pack ranking, and automated posting.</p>
+        </div>
+
+        <div class="track-card fade-in">
+          <div class="track-badge">Brand Track</div>
+          <div class="track-name">Aithority Brand</div>
+          <div class="track-ideal">For regional brands, DTC, and multi-location groups competing at scale</div>
+          <div class="track-tiers">
+            <div class="tier">
+              <span class="tier-name">Essentials</span>
+              <span class="tier-price">From $2,497 / mo</span>
+            </div>
+            <div class="tier">
+              <span class="tier-name">Growth</span>
+              <span class="tier-price">From $4,497 / mo</span>
+            </div>
+            <div class="tier">
+              <span class="tier-name">Dominate</span>
+              <span class="tier-price">From $7,997 / mo</span>
+            </div>
+          </div>
+          <p class="track-note">Full-spectrum SEO, paid media, content at scale, technical oversight, and custom reporting.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="how" aria-label="Our process">
+    <div class="container">
+      <div class="process-header fade-in">
+        <div class="section-label">How it works</div>
+        <h2 class="section-title">Intake. Build.<br><em>Ship. Optimize.</em></h2>
+      </div>
+      <div class="process-steps">
+
+        <div class="step fade-in">
+          <div class="step-num">STEP 01</div>
+          <div class="step-name">BRAND.md Intake</div>
+          <p class="step-desc">We capture your brand, competitors, audience, and goals via a structured interview — transcribed and distilled into a living brand document that powers every AI output.</p>
+        </div>
+
+        <div class="step fade-in">
+          <div class="step-num">STEP 02</div>
+          <div class="step-name">Technical Audit</div>
+          <p class="step-desc">Site architecture, schema, Core Web Vitals, GBP completeness, and AI-readiness scoring. We find every gap before we start building.</p>
+        </div>
+
+        <div class="step fade-in">
+          <div class="step-num">STEP 03</div>
+          <div class="step-name">System Build</div>
+          <p class="step-desc">Content pipelines, automation workflows, paid campaigns, and reporting dashboards are configured and launched. Your stack is live in week one.</p>
+        </div>
+
+        <div class="step fade-in">
+          <div class="step-num">STEP 04</div>
+          <div class="step-name">Continuous Optimization</div>
+          <p class="step-desc">Monthly strategy reviews, AI-generated performance commentary, and iterative improvements. The system learns. Your rankings grow.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section id="tech" aria-label="Technology stack">
+    <div class="container">
+      <div class="tech-header">
+        <div class="fade-in">
+          <div class="section-label">Our Stack</div>
+          <h2 class="section-title">Built on the<br><em>right tools.</em></h2>
+        </div>
+        <p class="section-sub fade-in">We don't use bloated agency software. Every tool in our stack was chosen for performance, flexibility, and AI-readiness.</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item fade-in">
+          <span class="tech-logo" aria-hidden="true">▲</span>
+          <div class="tech-name">Next.js</div>
+          <div class="tech-role">Web Framework</div>
+        </div>
+        <div class="tech-item fade-in">
+          <span class="tech-logo" aria-hidden="true">◈</span>
+          <div class="tech-name">Vercel</div>
+          <div class="tech-role">Deployment</div>
+        </div>
+        <div class="tech-item fade-in">
+          <span class="tech-logo" aria-hidden="true">◉</span>
+          <div class="tech-name">Supabase</div>
+          <div class="tech-role">Data Platform</div>
+        </div>
+        <div class="tech-item fade-in">
+          <span class="tech-logo" aria-hidden="true">◎</span>
+          <div class="tech-name">Claude API</div>
+          <div class="tech-role">AI Engine</div>
+        </div>
+        <div class="tech-item fade-in">
+          <span class="tech-logo" aria-hidden="true">⬡</span>
+          <div class="tech-name">n8n</div>
+          <div class="tech-role">Automation</div>
+        </div>
+        <div class="tech-item fade-in">
+          <span class="tech-logo" aria-hidden="true">◐</span>
+          <div class="tech-name">Sanity CMS</div>
+          <div class="tech-role">Content Layer</div>
+        </div>
+        <div class="tech-item fade-in">
+          <span class="tech-logo" aria-hidden="true">⟳</span>
+          <div class="tech-name">Google Ads API</div>
+          <div class="tech-role">Paid Media</div>
+        </div>
+        <div class="tech-item fade-in">
+          <span class="tech-logo" aria-hidden="true">◇</span>
+          <div class="tech-name">GBP API</div>
+          <div class="tech-role">Local Management</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" aria-label="Get a proposal">
+    <div class="cta-blob" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-inner fade-in">
+        <div class="section-label">Ready to start</div>
+        <h2 class="cta-headline">Let's build your<br><em>growth engine.</em></h2>
+        <p class="cta-sub">We take on a limited number of new clients each quarter. Tell us about your business and we'll outline a plan within 48 hours.</p>
+        <div class="cta-actions">
+          <a href="mailto:hello@aithority.com" class="btn-primary">Get a Proposal</a>
+          <a href="#services" class="btn-ghost">See our services</a>
+        </div>
+        <p class="cta-note">No commitment required &mdash; just a conversation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-logo">AITH<span>O</span>RITY</div>
+    <div class="footer-copy">&copy; 2026 Aithority. All rights reserved.</div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#services">Services</a>
+      <a href="#tracks">Tracks</a>
+      <a href="#how">Process</a>
+      <a href="mailto:hello@aithority.com">Contact</a>
+    </nav>
+  </footer>
+
+  <script>
+    // ─── MOBILE MENU ───────────────────────────────────────
+    function openMenu() {
+      document.getElementById('mobileMenu').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    // ─── SCROLL ANIMATIONS ─────────────────────────────────
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          const siblings = entry.target.parentElement.querySelectorAll('.fade-in:not(.visible)');
+          let delay = 0;
+          siblings.forEach((el, idx) => {
+            if (el === entry.target) delay = idx * 80;
+          });
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, Math.min(delay, 400));
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ─── NAV SCROLL STATE ──────────────────────────────────
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        nav.style.borderBottomColor = 'rgba(242, 240, 235, 0.15)';
+      } else {
+        nav.style.borderBottomColor = 'rgba(242, 240, 235, 0.1)';
+      }
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
