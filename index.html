@@ -25,7 +25,7 @@
       --black-2: #0c0c0e;
       --white: #F2F0EB;
       --muted: #888885;
-      --muted-2: #555552;
+      --muted-2: #6e6e6b;
       --accent: #C8FF00;
       --accent-dim: #a8d600;
       --accent-glow: rgba(200, 255, 0, 0.08);
@@ -726,6 +726,26 @@
     .fade-in.visible {
       opacity: 1;
       transform: none;
+    }
+
+    /* ─── REDUCED MOTION ─────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+
+      .service-card::after { transition: none; }
+      .tech-item { transition: none; }
+      .track-card { transition: none; }
+      .btn-primary { transition: none; }
+      .btn-ghost { transition: none; }
+      .nav-links a { transition: none; }
+      .nav-cta { transition: none; }
+      .nav-hamburger span { transition: none; }
+      .tech-logo { transition: none; }
+      html { scroll-behavior: auto; }
     }
 
     /* ─── MOBILE NAV OPEN STATE ───────────────────────── */
