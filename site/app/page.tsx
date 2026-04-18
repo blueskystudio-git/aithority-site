@@ -329,13 +329,18 @@ export default function Home() {
         <div className="footer-logo">
           AITH<span>O</span>RITY
         </div>
-        <div className="footer-copy">&copy; 2026 Aithority. All rights reserved.</div>
         <nav className="footer-links" aria-label="Footer navigation">
           <a href="#services">Services</a>
           <a href="#tracks">Tracks</a>
           <a href="#how">Process</a>
           <a href="mailto:hello@getaithority.co">Contact</a>
         </nav>
+        <div className="footer-legal">
+          <a href="/privacy">Privacy Policy</a>
+          <span className="divider">|</span>
+          <a href="/terms">Terms &amp; Conditions</a>
+        </div>
+        <div className="footer-copy">&copy; 2026 Aithority. All rights reserved.</div>
       </footer>
     </>
   );
