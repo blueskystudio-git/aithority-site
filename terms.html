@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aithority Terms and Conditions — the terms governing use of our website and services." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Terms and Conditions — Aithority" />
+  <meta property="og:description" content="Terms governing use of the Aithority website and services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getaithority.co/terms" />
+  <title>Terms and Conditions — Aithority</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #050506;
+      --black-2: #0c0c0e;
+      --white: #F2F0EB;
+      --muted: #888885;
+      --muted-2: #6e6e6b;
+      --accent: #C8FF00;
+      --accent-dim: #a8d600;
+      --accent-glow: rgba(200, 255, 0, 0.08);
+      --border: rgba(242, 240, 235, 0.1);
+      --border-strong: rgba(242, 240, 235, 0.18);
+      --surface: rgba(242, 240, 235, 0.03);
+      --font-head: 'Inter', -apple-system, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-head);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--muted-2); border-radius: 2px; }
+
+    /* ─── NAV ─────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 3rem;
+      border-bottom: 0.5px solid var(--border);
+      background: rgba(5, 5, 6, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .nav-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+
+    .nav-links a {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--accent);
+      padding: 0.65rem 1.5rem;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover { background: var(--accent-dim); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--white);
+      transition: all 0.3s;
+    }
+
+    /* ─── LEGAL CONTENT ──────────────────────────────── */
+    .legal-page {
+      padding: 12rem 3rem 6rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .legal-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .legal-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 1.5px;
+      background: var(--accent);
+    }
+
+    h1.legal-title {
+      font-size: clamp(2rem, 4vw, 3.75rem);
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    h1.legal-title em {
+      font-style: italic;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .legal-updated {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--muted);
+      margin-bottom: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .legal-body h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      color: var(--white);
+    }
+
+    .legal-body p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .legal-body ul {
+      list-style: none;
+      margin-bottom: 1rem;
+      padding-left: 0;
+    }
+
+    .legal-body ul li {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--muted);
+      padding: 0.25rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .legal-body ul li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+    }
+
+    .legal-body a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--accent);
+      transition: opacity 0.2s;
+    }
+
+    .legal-body a:hover { opacity: 0.7; }
+
+    /* ─── FOOTER ──────────────────────────────────────── */
+    footer {
+      border-top: 0.5px solid var(--border);
+      padding: 2.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      font-size: 0.85rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .footer-logo span { color: var(--accent); }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .footer-links { display: flex; gap: 2rem; }
+
+    .footer-links a {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--white); }
+
+    /* ─── REDUCED MOTION ──────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      .nav-links a, .nav-cta, .legal-body a, .footer-links a { transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ─── MOBILE ──────────────────────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--black);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover { color: var(--accent); }
+
+    .mobile-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 3rem;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .legal-page { padding: 9rem 1.5rem 4rem; }
+      footer { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 2.5rem 1.5rem; }
+      .footer-links { flex-wrap: wrap; gap: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="Aithority home">AITH<span>O</span>RITY</a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#tracks">Tracks</a></li>
+      <li><a href="/#how">Process</a></li>
+      <li><a href="/#tech">Stack</a></li>
+    </ul>
+    <a href="/#cta" class="nav-cta">Get a Proposal</a>
+    <button class="nav-hamburger" aria-label="Open menu" onclick="openMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="mobile-close" onclick="closeMenu()" aria-label="Close menu">&times;</button>
+    <a href="/#services" onclick="closeMenu()">Services</a>
+    <a href="/#tracks" onclick="closeMenu()">Tracks</a>
+    <a href="/#how" onclick="closeMenu()">Process</a>
+    <a href="/#tech" onclick="closeMenu()">Stack</a>
+    <a href="/#cta" class="btn-primary" onclick="closeMenu()">Get a Proposal</a>
+  </div>
+
+  <!-- TERMS AND CONDITIONS -->
+  <main class="legal-page">
+    <div class="legal-eyebrow">Legal</div>
+    <h1 class="legal-title">Terms &amp; <em>Conditions</em></h1>
+    <p class="legal-updated">Last updated: April 18, 2026</p>
+
+    <div class="legal-body">
+
+      <p>These Terms and Conditions ("Terms") govern your use of getaithority.co (the "Site") and any services provided by Aithority, operated by Blue Sky Studio ("we," "us," or "our"). By accessing the Site or engaging our services, you agree to these Terms.</p>
+
+      <h2>1. Services</h2>
+
+      <p>Aithority provides AI-powered SEO, paid media management, custom web development, marketing automation, analytics, and brand strategy services. The specific scope, deliverables, timeline, and fees for each engagement are defined in a separate service agreement or statement of work ("SOW") between us and the client.</p>
+
+      <h2>2. Use of the Site</h2>
+
+      <p>You may use the Site for lawful purposes only. You agree not to:</p>
+      <ul>
+        <li>Use the Site in any way that violates applicable law or regulation</li>
+        <li>Attempt to gain unauthorized access to the Site, its servers, or connected systems</li>
+        <li>Use automated tools to scrape, crawl, or extract content without permission</li>
+        <li>Interfere with the Site's operation or other users' access</li>
+      </ul>
+
+      <h2>3. Intellectual Property</h2>
+
+      <p>All content on the Site — including text, design, graphics, logos, and code — is owned by Aithority or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works from Site content without our written permission.</p>
+
+      <p>For client engagements, intellectual property ownership and licensing terms are governed by the applicable SOW or service agreement.</p>
+
+      <h2>4. Client Obligations</h2>
+
+      <p>If you engage us as a client, you agree to:</p>
+      <ul>
+        <li>Provide accurate and timely information necessary for service delivery</li>
+        <li>Grant reasonable access to accounts, platforms, and systems required for the work</li>
+        <li>Review and approve deliverables within agreed timeframes</li>
+        <li>Pay invoices according to the terms specified in your SOW</li>
+      </ul>
+
+      <h2>5. Payment Terms</h2>
+
+      <p>Retainer fees are billed monthly in advance. Project fees are billed according to the milestones defined in the SOW. All fees are in US dollars unless otherwise specified. Late payments may incur interest at the rate of 1.5% per month or the maximum permitted by law, whichever is lower.</p>
+
+      <h2>6. Confidentiality</h2>
+
+      <p>Both parties agree to keep confidential any proprietary or non-public information shared during the engagement. This includes business strategies, client data, login credentials, financial information, and the BRAND.md document. Confidentiality obligations survive termination of services.</p>
+
+      <h2>7. Limitation of Liability</h2>
+
+      <p>To the maximum extent permitted by law, Aithority's total liability for any claim arising from or related to the Site or our services is limited to the fees paid by you in the twelve (12) months preceding the claim.</p>
+
+      <p>We are not liable for indirect, incidental, consequential, special, or punitive damages, including lost profits, lost data, or business interruption, regardless of the theory of liability.</p>
+
+      <h2>8. Disclaimer of Warranties</h2>
+
+      <p>The Site is provided "as is" and "as available" without warranties of any kind, express or implied. We do not guarantee that the Site will be uninterrupted, error-free, or free of harmful components.</p>
+
+      <p>While we work to deliver measurable results, we do not guarantee specific search rankings, traffic volumes, conversion rates, or revenue outcomes. Digital marketing results depend on many factors outside our control, including search engine algorithms, market conditions, and competitive activity.</p>
+
+      <h2>9. Indemnification</h2>
+
+      <p>You agree to indemnify and hold harmless Aithority, Blue Sky Studio, and their officers, employees, and agents from any claims, damages, losses, or expenses (including legal fees) arising from your violation of these Terms or misuse of the Site or services.</p>
+
+      <h2>10. Termination</h2>
+
+      <p>Either party may terminate a service engagement according to the terms specified in the applicable SOW. We reserve the right to suspend or terminate your access to the Site at any time for violation of these Terms.</p>
+
+      <p>Upon termination, all fees owed through the date of termination remain payable. Sections on intellectual property, confidentiality, limitation of liability, and indemnification survive termination.</p>
+
+      <h2>11. Governing Law</h2>
+
+      <p>These Terms are governed by and construed in accordance with the laws of the State of Georgia, United States, without regard to conflict of law principles. Any disputes arising from these Terms shall be resolved in the state or federal courts located in Georgia.</p>
+
+      <h2>12. Changes to These Terms</h2>
+
+      <p>We may update these Terms from time to time. Changes will be posted on this page with an updated "Last updated" date. Your continued use of the Site after changes constitutes acceptance of the revised Terms.</p>
+
+      <h2>13. Severability</h2>
+
+      <p>If any provision of these Terms is found to be unenforceable, the remaining provisions remain in full force and effect.</p>
+
+      <h2>14. Contact</h2>
+
+      <p>Questions about these Terms? Contact us at:</p>
+      <p>Aithority (operated by Blue Sky Studio)<br>
+      Email: <a href="mailto:hello@getaithority.co">hello@getaithority.co</a></p>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-logo">AITH<span>O</span>RITY</div>
+    <div class="footer-copy">&copy; 2026 Aithority. All rights reserved.</div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="/">Home</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="mailto:hello@getaithority.co">Contact</a>
+    </nav>
+  </footer>
+
+  <script>
+    function openMenu() {
+      document.getElementById('mobileMenu').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+  </script>
+
+</body>
+</html>

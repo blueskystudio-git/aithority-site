@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aithority Privacy Policy — how we collect, use, and protect your information." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Privacy Policy — Aithority" />
+  <meta property="og:description" content="How Aithority collects, uses, and protects your information." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getaithority.co/privacy" />
+  <title>Privacy Policy — Aithority</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #050506;
+      --black-2: #0c0c0e;
+      --white: #F2F0EB;
+      --muted: #888885;
+      --muted-2: #6e6e6b;
+      --accent: #C8FF00;
+      --accent-dim: #a8d600;
+      --accent-glow: rgba(200, 255, 0, 0.08);
+      --border: rgba(242, 240, 235, 0.1);
+      --border-strong: rgba(242, 240, 235, 0.18);
+      --surface: rgba(242, 240, 235, 0.03);
+      --font-head: 'Inter', -apple-system, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-head);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--muted-2); border-radius: 2px; }
+
+    /* ─── NAV ─────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 3rem;
+      border-bottom: 0.5px solid var(--border);
+      background: rgba(5, 5, 6, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .nav-logo {
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+
+    .nav-links a {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--accent);
+      padding: 0.65rem 1.5rem;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover { background: var(--accent-dim); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--white);
+      transition: all 0.3s;
+    }
+
+    /* ─── LEGAL CONTENT ──────────────────────────────── */
+    .legal-page {
+      padding: 12rem 3rem 6rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .legal-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .legal-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 1.5px;
+      background: var(--accent);
+    }
+
+    h1.legal-title {
+      font-size: clamp(2rem, 4vw, 3.75rem);
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    h1.legal-title em {
+      font-style: italic;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .legal-updated {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--muted);
+      margin-bottom: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .legal-body h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      color: var(--white);
+    }
+
+    .legal-body p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .legal-body ul {
+      list-style: none;
+      margin-bottom: 1rem;
+      padding-left: 0;
+    }
+
+    .legal-body ul li {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--muted);
+      padding: 0.25rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .legal-body ul li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+    }
+
+    .legal-body a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--accent);
+      transition: opacity 0.2s;
+    }
+
+    .legal-body a:hover { opacity: 0.7; }
+
+    /* ─── FOOTER ──────────────────────────────────────── */
+    footer {
+      border-top: 0.5px solid var(--border);
+      padding: 2.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      font-size: 0.85rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .footer-logo span { color: var(--accent); }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .footer-links { display: flex; gap: 2rem; }
+
+    .footer-links a {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--white); }
+
+    /* ─── REDUCED MOTION ──────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      .nav-links a, .nav-cta, .legal-body a, .footer-links a { transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ─── MOBILE ──────────────────────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--black);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover { color: var(--accent); }
+
+    .mobile-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 3rem;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .legal-page { padding: 9rem 1.5rem 4rem; }
+      footer { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 2.5rem 1.5rem; }
+      .footer-links { flex-wrap: wrap; gap: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="Aithority home">AITH<span>O</span>RITY</a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#tracks">Tracks</a></li>
+      <li><a href="/#how">Process</a></li>
+      <li><a href="/#tech">Stack</a></li>
+    </ul>
+    <a href="/#cta" class="nav-cta">Get a Proposal</a>
+    <button class="nav-hamburger" aria-label="Open menu" onclick="openMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="mobile-close" onclick="closeMenu()" aria-label="Close menu">&times;</button>
+    <a href="/#services" onclick="closeMenu()">Services</a>
+    <a href="/#tracks" onclick="closeMenu()">Tracks</a>
+    <a href="/#how" onclick="closeMenu()">Process</a>
+    <a href="/#tech" onclick="closeMenu()">Stack</a>
+    <a href="/#cta" class="btn-primary" onclick="closeMenu()">Get a Proposal</a>
+  </div>
+
+  <!-- PRIVACY POLICY -->
+  <main class="legal-page">
+    <div class="legal-eyebrow">Legal</div>
+    <h1 class="legal-title">Privacy <em>Policy</em></h1>
+    <p class="legal-updated">Last updated: April 18, 2026</p>
+
+    <div class="legal-body">
+
+      <p>Aithority, operated by Blue Sky Studio ("we," "us," or "our"), respects your privacy. This Privacy Policy describes how we collect, use, and share information when you visit getaithority.co (the "Site") or engage our services.</p>
+
+      <h2>1. Information We Collect</h2>
+
+      <p><strong>Information you provide.</strong> When you contact us, request a proposal, or become a client, we may collect:</p>
+      <ul>
+        <li>Name and job title</li>
+        <li>Email address and phone number</li>
+        <li>Company name, website URL, and business details</li>
+        <li>Any information you include in messages or intake forms</li>
+      </ul>
+
+      <p><strong>Information collected automatically.</strong> When you visit the Site, we may collect:</p>
+      <ul>
+        <li>IP address and approximate location (city/region)</li>
+        <li>Browser type, operating system, and device information</li>
+        <li>Pages viewed, time spent, and referring URL</li>
+        <li>Interaction data via analytics tools (see Section 4)</li>
+      </ul>
+
+      <h2>2. How We Use Your Information</h2>
+
+      <p>We use collected information to:</p>
+      <ul>
+        <li>Respond to inquiries and deliver proposals</li>
+        <li>Provide, maintain, and improve our services</li>
+        <li>Communicate about projects, deliverables, and account updates</li>
+        <li>Send relevant marketing communications (with your consent, where required)</li>
+        <li>Analyze Site usage to improve performance and content</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+
+      <h2>3. How We Share Your Information</h2>
+
+      <p>We do not sell your personal information. We may share information with:</p>
+      <ul>
+        <li><strong>Service providers</strong> — hosting, analytics, email, and project management tools that help us operate the Site and deliver services</li>
+        <li><strong>Professional advisors</strong> — legal, financial, or accounting professionals as needed</li>
+        <li><strong>Legal compliance</strong> — when required by law, regulation, or valid legal process</li>
+        <li><strong>Business transfers</strong> — in connection with a merger, acquisition, or sale of assets</li>
+      </ul>
+
+      <h2>4. Analytics and Tracking</h2>
+
+      <p>We use Vercel Analytics and Vercel Speed Insights to understand how visitors use the Site. These tools collect anonymized performance and usage data. We do not use third-party advertising trackers or retargeting pixels on this Site.</p>
+
+      <h2>5. Cookies</h2>
+
+      <p>The Site may use essential cookies necessary for functionality. We do not use advertising or cross-site tracking cookies. Your browser settings allow you to block or delete cookies at any time.</p>
+
+      <h2>6. Data Retention</h2>
+
+      <p>We retain personal information for as long as necessary to fulfill the purposes described in this policy, maintain our business relationship, or comply with legal obligations. When information is no longer needed, we delete or anonymize it.</p>
+
+      <h2>7. Your Rights</h2>
+
+      <p>Depending on your jurisdiction, you may have the right to:</p>
+      <ul>
+        <li>Access the personal information we hold about you</li>
+        <li>Request correction of inaccurate information</li>
+        <li>Request deletion of your personal information</li>
+        <li>Opt out of marketing communications</li>
+        <li>Request data portability</li>
+      </ul>
+
+      <p>To exercise any of these rights, contact us at <a href="mailto:hello@getaithority.co">hello@getaithority.co</a>.</p>
+
+      <h2>8. Security</h2>
+
+      <p>We implement reasonable technical and organizational measures to protect your information. No method of transmission or storage is completely secure, but we take commercially appropriate steps to safeguard your data.</p>
+
+      <h2>9. Third-Party Links</h2>
+
+      <p>The Site may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites. We encourage you to review their privacy policies.</p>
+
+      <h2>10. Children's Privacy</h2>
+
+      <p>Our services are not directed to individuals under 18. We do not knowingly collect personal information from children. If we become aware that we have collected information from a child, we will delete it.</p>
+
+      <h2>11. Changes to This Policy</h2>
+
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. Your continued use of the Site after changes constitutes acceptance of the revised policy.</p>
+
+      <h2>12. Contact</h2>
+
+      <p>If you have questions about this Privacy Policy or our data practices, contact us at:</p>
+      <p>Aithority (operated by Blue Sky Studio)<br>
+      Email: <a href="mailto:hello@getaithority.co">hello@getaithority.co</a></p>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-logo">AITH<span>O</span>RITY</div>
+    <div class="footer-copy">&copy; 2026 Aithority. All rights reserved.</div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="/">Home</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="mailto:hello@getaithority.co">Contact</a>
+    </nav>
+  </footer>
+
+  <script>
+    function openMenu() {
+      document.getElementById('mobileMenu').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+  </script>
+
+</body>
+</html>
