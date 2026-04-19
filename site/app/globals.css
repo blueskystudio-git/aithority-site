@@ -37,7 +37,7 @@ body {
 ::-webkit-scrollbar-thumb { background: var(--muted-2); border-radius: 2px; }
 
 /* ─── NAV ─────────────────────────────────────────── */
-nav {
+nav[role="navigation"] {
   position: fixed;
   top: 0;
   left: 0;
@@ -883,7 +883,7 @@ h1.legal-title em {
 }
 
 @media (max-width: 768px) {
-  nav { padding: 1.25rem 1.5rem; }
+  nav[role="navigation"] { padding: 1.25rem 1.5rem; }
 
   section { padding: 5rem 1.5rem; }
 
