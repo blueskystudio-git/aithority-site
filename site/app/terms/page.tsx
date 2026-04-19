@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteNav } from "../client";
 
 export const metadata: Metadata = {
   title: "Terms and Conditions — Aithority",
@@ -15,20 +16,9 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <>
-      <nav role="navigation" aria-label="Main navigation">
-        <a href="/" className="nav-logo" aria-label="Aithority home">
-          AITH<span>O</span>RITY
-        </a>
-        <ul className="nav-links">
-          <li><a href="/#services">Services</a></li>
-          <li><a href="/#tracks">Tracks</a></li>
-          <li><a href="/#how">Process</a></li>
-          <li><a href="/#tech">Stack</a></li>
-        </ul>
-        <a href="/#cta" className="nav-cta">Get a Proposal</a>
-      </nav>
+      <SiteNav />
 
-      <main className="legal-page">
+      <main id="main" className="legal-page">
         <div className="legal-eyebrow">Legal</div>
         <h1 className="legal-title">Terms &amp; <em>Conditions</em></h1>
         <p className="legal-updated">Last updated: April 18, 2026</p>

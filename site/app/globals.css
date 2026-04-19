@@ -4,6 +4,50 @@
   box-sizing: border-box;
 }
 
+/* ─── FOCUS (KEYBOARD) ─────────────────────────────── */
+:focus { outline: none; }
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.service-card:focus-within,
+.track-card:focus-within,
+.tech-item:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ─── SKIP LINK ─────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent);
+  color: var(--black);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
+}
+
 :root {
   --black: #050506;
   --black-2: #0c0c0e;
@@ -102,11 +146,15 @@ nav[role="navigation"] {
 .nav-hamburger {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
   cursor: pointer;
   background: none;
   border: none;
-  padding: 4px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
 }
 
 .nav-hamburger span {
@@ -298,6 +346,7 @@ h2.section-title {
 h2.section-title em {
   font-style: italic;
   font-weight: 400;
+  color: var(--accent);
 }
 
 .section-sub {
@@ -647,7 +696,7 @@ h2.cta-headline em {
 .cta-note {
   margin-top: 2rem;
   font-size: 0.75rem;
-  color: var(--muted-2);
+  color: var(--muted);
   font-weight: 300;
   letter-spacing: 0.05em;
 }
@@ -821,14 +870,16 @@ h1.legal-title em {
 .legal-body a:hover { opacity: 0.7; }
 
 /* ─── ANIMATIONS ──────────────────────────────────── */
-.fade-in {
+/* Fade-in is gated by .js on <html> so content stays visible when
+   JavaScript is disabled or slow. */
+.js .fade-in {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1),
               transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.fade-in.visible {
+.js .fade-in.visible {
   opacity: 1;
   transform: none;
 }
@@ -861,13 +912,24 @@ h1.legal-title em {
 
 .mobile-close {
   position: absolute;
-  top: 1.5rem;
-  right: 3rem;
+  top: 1rem;
+  right: 1.5rem;
   background: none;
   border: none;
   color: var(--muted);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  line-height: 1;
   cursor: pointer;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-close:hover,
+.mobile-close:focus-visible {
+  color: var(--white);
 }
 
 /* ─── RESPONSIVE ──────────────────────────────────── */
@@ -914,4 +976,36 @@ h1.legal-title em {
 
 @media (max-width: 480px) {
   .hero-stats { flex-direction: column; gap: 2rem; }
+}
+
+/* ─── REDUCED MOTION ─────────────────────────────────
+   Respect prefers-reduced-motion: remove transitions, transforms,
+   smooth scroll, and keep fade-in content fully visible. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html { scroll-behavior: auto; }
+
+  .js .fade-in,
+  .js .fade-in.visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .btn-primary:hover,
+  .service-card:hover,
+  .tech-item:hover,
+  .track-card:hover {
+    transform: none !important;
+  }
+
+  .skip-link { transition: none !important; }
 }

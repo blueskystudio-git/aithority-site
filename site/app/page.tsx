@@ -1,26 +1,12 @@
-import { MobileMenu, ScrollAnimations, NavScrollState } from "./client";
+import { SiteNav, ScrollAnimations } from "./client";
 
 export default function Home() {
   return (
     <>
       <ScrollAnimations />
-      <NavScrollState />
+      <SiteNav />
 
-      {/* NAV */}
-      <nav role="navigation" aria-label="Main navigation">
-        <a href="/" className="nav-logo" aria-label="Aithority home">
-          AITH<span>O</span>RITY
-        </a>
-        <ul className="nav-links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#tracks">Tracks</a></li>
-          <li><a href="#how">Process</a></li>
-          <li><a href="#tech">Stack</a></li>
-        </ul>
-        <a href="#cta" className="nav-cta">Get a Proposal</a>
-        <MobileMenu />
-      </nav>
-
+      <main id="main">
       {/* HERO */}
       <section id="hero" aria-label="Hero">
         <div className="hero-bg-grid" aria-hidden="true"></div>
@@ -186,7 +172,7 @@ export default function Home() {
           <div className="tracks-grid">
             <div className="track-card fade-in">
               <div className="track-badge">Local Track</div>
-              <div className="track-name">Aithority Local</div>
+              <h3 className="track-name">Aithority Local</h3>
               <div className="track-ideal">
                 For single-location and multi-location businesses competing in
                 local search
@@ -203,7 +189,7 @@ export default function Home() {
             </div>
             <div className="track-card fade-in">
               <div className="track-badge">Brand Track</div>
-              <div className="track-name">Aithority Brand</div>
+              <h3 className="track-name">Aithority Brand</h3>
               <div className="track-ideal">
                 For regional brands, DTC, and multi-location groups competing at
                 scale
@@ -234,7 +220,7 @@ export default function Home() {
           <div className="process-steps">
             <div className="step fade-in">
               <div className="step-num">STEP 01</div>
-              <div className="step-name">BRAND.md Intake</div>
+              <h3 className="step-name">BRAND.md Intake</h3>
               <p className="step-desc">
                 We capture your brand, competitors, audience, and goals via a
                 structured interview — transcribed and distilled into a living
@@ -243,7 +229,7 @@ export default function Home() {
             </div>
             <div className="step fade-in">
               <div className="step-num">STEP 02</div>
-              <div className="step-name">Technical Audit</div>
+              <h3 className="step-name">Technical Audit</h3>
               <p className="step-desc">
                 Site architecture, schema, Core Web Vitals, GBP completeness, and
                 AI-readiness scoring. We find every gap before we start building.
@@ -251,7 +237,7 @@ export default function Home() {
             </div>
             <div className="step fade-in">
               <div className="step-num">STEP 03</div>
-              <div className="step-name">System Build</div>
+              <h3 className="step-name">System Build</h3>
               <p className="step-desc">
                 Content pipelines, automation workflows, paid campaigns, and
                 reporting dashboards are configured and launched. Your stack is
@@ -260,7 +246,7 @@ export default function Home() {
             </div>
             <div className="step fade-in">
               <div className="step-num">STEP 04</div>
-              <div className="step-name">Continuous Optimization</div>
+              <h3 className="step-name">Continuous Optimization</h3>
               <p className="step-desc">
                 Monthly strategy reviews, AI-generated performance commentary, and
                 iterative improvements. The system learns. Your rankings grow.
@@ -324,6 +310,8 @@ export default function Home() {
         </div>
       </section>
 
+      </main>
+
       {/* FOOTER */}
       <footer role="contentinfo">
         <div className="footer-logo">
@@ -363,7 +351,7 @@ function ServiceCard({
     <div className="service-card fade-in">
       <div className="service-num">{num}</div>
       <span className="service-icon" aria-hidden="true">{icon}</span>
-      <div className="service-name">{name}</div>
+      <h3 className="service-name">{name}</h3>
       <p className="service-desc">{desc}</p>
       <ul className="service-features" aria-label={`${name} service features`}>
         {features.map((f) => (
