@@ -46,6 +46,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
   padding: 1.5rem 3rem;
   border-bottom: 0.5px solid var(--border);
   background: rgba(5, 5, 6, 0.88);
@@ -66,8 +67,9 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 1.75rem;
   list-style: none;
+  flex-wrap: nowrap;
 }
 
 .nav-links a {
@@ -875,10 +877,13 @@ h1.legal-title em {
   .tracks-intro { grid-template-columns: 1fr; gap: 2rem; }
 }
 
-@media (max-width: 768px) {
-  nav { padding: 1.25rem 1.5rem; }
+@media (max-width: 900px) {
   .nav-links, .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 1.25rem 1.5rem; }
 
   section { padding: 5rem 1.5rem; }
 
