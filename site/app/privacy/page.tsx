@@ -35,7 +35,7 @@ export default function PrivacyPage() {
 
         <div className="legal-body">
           <p>
-            Aithority, operated by Blue Sky Studio (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;),
+            Aithority, operated by Blue Sky Studio, LLC (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;),
             respects your privacy. This Privacy Policy describes how we collect, use, and share information when you
             visit getaithority.co (the &ldquo;Site&rdquo;) or engage our services.
           </p>
@@ -139,7 +139,7 @@ export default function PrivacyPage() {
           <h2>12. Contact</h2>
           <p>If you have questions about this Privacy Policy or our data practices, contact us at:</p>
           <p>
-            Aithority (operated by Blue Sky Studio)<br />
+            Aithority (operated by Blue Sky Studio, LLC)<br />
             Email: <a href="mailto:hello@getaithority.co">hello@getaithority.co</a>
           </p>
         </div>

@@ -36,7 +36,7 @@ export default function TermsPage() {
         <div className="legal-body">
           <p>
             These Terms and Conditions (&ldquo;Terms&rdquo;) govern your use of getaithority.co (the &ldquo;Site&rdquo;)
-            and any services provided by Aithority, operated by Blue Sky Studio (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or
+            and any services provided by Aithority, operated by Blue Sky Studio, LLC (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or
             &ldquo;our&rdquo;). By accessing the Site or engaging our services, you agree to these Terms.
           </p>
 
@@ -116,7 +116,7 @@ export default function TermsPage() {
 
           <h2>9. Indemnification</h2>
           <p>
-            You agree to indemnify and hold harmless Aithority, Blue Sky Studio, and their officers, employees, and
+            You agree to indemnify and hold harmless Aithority, Blue Sky Studio, LLC, and their officers, employees, and
             agents from any claims, damages, losses, or expenses (including legal fees) arising from your violation of
             these Terms or misuse of the Site or services.
           </p>
@@ -153,7 +153,7 @@ export default function TermsPage() {
           <h2>14. Contact</h2>
           <p>Questions about these Terms? Contact us at:</p>
           <p>
-            Aithority (operated by Blue Sky Studio)<br />
+            Aithority (operated by Blue Sky Studio, LLC)<br />
             Email: <a href="mailto:hello@getaithority.co">hello@getaithority.co</a>
           </p>
         </div>

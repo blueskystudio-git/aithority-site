@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Aithority is the client-facing brand of Blue Sky Studio — an AI-powered growth agency. This repo contains the marketing site for **getaithority.co** (canonical domain).
+Aithority is the client-facing brand of Blue Sky Studio, LLC — an AI-powered growth agency. This repo contains the marketing site for **getaithority.co** (canonical domain).
 
 ## Repository Structure
 

@@ -5,7 +5,7 @@
 **Canonical domain:** getaithority.co
 **Secondary (redirect):** aithority.agency → 301 → getaithority.co
 **Primary email:** hello@getaithority.co (to provision)
-**Operating entity:** Blue Sky Studio
+**Operating entity:** Blue Sky Studio, LLC
 **Status:** v0.3 — canonical domain set
 **Last updated:** April 18, 2026
 
@@ -17,7 +17,7 @@ Aithority is an AI-powered growth agency. We deliver SEO, paid media, custom web
 
 The pitch in one line, pulled from the site: **Search. Built by machines. Run by experts.**
 
-Aithority is the client-facing brand. Blue Sky Studio is the operating entity behind it and does not appear in client-facing materials.
+Aithority is the client-facing brand. Blue Sky Studio, LLC is the operating entity behind it and does not appear in client-facing materials.
 
 ### Why getaithority.co is canonical
 The `.co` TLD carries the brand through both an agency phase and a future SaaS phase without a rename. "Get Aithority" functions as a CTA embedded in the URL, is shorter to say out loud, and avoids the redundancy of `.agency` after a brand name that already contains "authority." aithority.agency remains owned and 301-redirects to preserve any equity built against that domain.
@@ -265,7 +265,7 @@ These are claims, not measured metrics yet. Back them with case-study numbers as
 
 ## 9. Boundaries and Decisions on Record
 
-- Aithority is the sole client-facing brand. Blue Sky Studio operates behind it.
+- Aithority is the sole client-facing brand. Blue Sky Studio, LLC operates behind it.
 - One brand, no sub-brands in front of Aithority (Pillar and Flywheel explored and parked).
 - **Canonical domain is getaithority.co.** Chosen for (a) SaaS optionality in 2027+, (b) spokenness in sales calls, (c) avoiding TLD redundancy with "authority" already in the brand name. aithority.agency is held and 301-redirects.
 - SaaS spinout of Aithority-the-platform is deferred to year-end 2026 or later — getaithority.co carries the brand through that transition without rename.
